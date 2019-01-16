@@ -1,0 +1,41 @@
+[user]
+	name = Tim Micheletto
+	email = tmicheletto@seek.com.au
+[core]
+    editor = vim
+	excludesfile = ~/.gitignore_global
+[alias]
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+    f = fetch
+    p = pull
+    publish = "!git push -u origin $(git branch-name)"
+    st = status
+    co = checkout
+    ec = config --global -e
+    up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+    cob = checkout -b
+    cm = !git add -A && git commit
+    cmad = !git add -A && git reset head Source/SEEK.AdCentre.Website/Web.config && git commit
+    save = !git add -A && git commit -m 'SAVEPOINT'
+    undo = reset HEAD~1 --mixed
+    amend = commit -a --amend
+    wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+    bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
+    bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
+    # Delete the remote version of the current branch
+    unpublish = "!git push origin :$(git branch-name)"
+[diff]
+	tool = p4mergetool
+[merge]
+	tool = p4mergetool
+[push]
+	default = upstream
+[mergetool]
+	keepBackup = false
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[mergetool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+	trustExitCode = false
+[difftool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
