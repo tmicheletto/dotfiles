@@ -1,10 +1,26 @@
 #!/usr/bin/env bash
 
+set -eou pipefail
+shopt -s extglob
+
 ###########################
 # This script installs the dotfiles and runs all other system configuration scripts
 # @author Tim Micheletto
 ###########################
 
+repo_home="$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
+
+# Update ~/.zshrc to source dotfile repo zshrc
+echo >&2 'Updating ~/.zshrc...'
+echo "source ${repo_home}/dots/zshrc" >> "${HOME}/.zshrc"
+
+# Link each of the dotfile repo files into the home directory
+cd "${repo_home}/dots"
+for dot_file in !(zshrc); do
+  rm -f "${HOME}/.${dot_file}" 2> /dev/null || true
+  echo >&2 "Linking ~/.${dot_file}..."
+  ln -s "${repo_home}/dots/${dot_file}" "${HOME}/.${dot_file}"
+done
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
