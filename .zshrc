@@ -101,7 +101,7 @@ alias gcm="git add -A && git commit"
 #
 function awsauth { ~/Code/SEEK-Jobs/aws-auth-saml-linux-osx-bash/auth.sh "$@"; [[ -r "$HOME/.aws/sessiontoken" ]] && . "$HOME/.aws/sessiontoken"; }
 
-export GO111MODULE=on
+export GOPATH=$HOME/Code/go
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
