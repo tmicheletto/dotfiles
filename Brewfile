@@ -7,7 +7,7 @@ tap "caskroom/cask"
 # Binaries
 brew "coreutils"
 brew "adr-tools"
-brew "macvim --with-cscope --with-lua --override-system-vim"
+# brew "macvim --with-cscope --with-lua --override-system-vim"
 brew "go"
 
 # Apps
