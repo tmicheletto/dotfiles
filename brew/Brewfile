@@ -5,6 +5,8 @@ tap "homebrew/services"
 tap "caskroom/cask"
 
 # Binaries
+brew "python"
+brew "awscli"
 brew "coreutils"
 brew "adr-tools"
 # brew "macvim --with-cscope --with-lua --override-system-vim"
