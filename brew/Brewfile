@@ -3,23 +3,34 @@ tap "homebrew/core"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "caskroom/cask"
+tap "caskroom/fonts"
+tap "caskroom/versions"
 
 # Binaries
 brew "python"
 brew "awscli"
+brew "jq"
 brew "coreutils"
 brew "adr-tools"
-# brew "macvim --with-cscope --with-lua --override-system-vim"
 brew "go"
+brew "node"
+brew "scala"
+brew "sbt"
 
 # Apps
+cask "docker"
 cask "iterm2"
 cask "atom"
 cask "google-chrome"
 cask "google-backup-and-sync"
 cask "slack"
 cask "macdown"
-cask "java"
+cask "java8"
 cask "intellij-idea-ce"
 cask "visual-studio-code"
 cask "macvim"
+cask "dotnet-sdk"
+cask "font-fira-code"
+
+# Mac App Store
+mas 'WhatsApp', id: 1147396723
