@@ -31,6 +31,7 @@ cask "visual-studio-code"
 cask "macvim"
 cask "dotnet-sdk"
 cask "font-fira-code"
+cask "p4v"
 
 # Mac App Store
 mas 'WhatsApp', id: 1147396723
