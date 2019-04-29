@@ -16,6 +16,7 @@ brew "go"
 brew "node"
 brew "scala"
 brew "sbt"
+brew "nvm"
 
 # Apps
 cask "docker"
