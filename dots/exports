@@ -1,0 +1,8 @@
+# Golang
+export GOPATH=$HOME/code/go
+export GO111MODULE=auto
+export GOBIN=$GOPATH/bin
+
+# Path
+PATH=$PATH:$GOPATH:$GOBIN
+export PATH
