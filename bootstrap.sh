@@ -57,6 +57,9 @@ for dot_file in !(zshrc); do
   ln -s "${repo_home}/dots/${dot_file}" "${HOME}/.${dot_file}"
 done
 
+# Create an extra settings file that to put things we don't want under source control
+touch "${HOME}/.extra"
+
 # Setup bin directory
 # mkdir -p "${HOME}/bin"
 # cp "${repo_home}"/bin/* "${HOME}/bin"
@@ -90,3 +93,13 @@ defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 # Set Zsh as default shell
 chsh -s /bin/zsh
+
+# Configure docker machine
+
+# docker-machine-driver-xhyve need root owner and uid
+sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+
+# Create default machine
+# https://pewpewthespells.com/blog/setup_docker_on_mac.html
+docker-machine create --driver xhyve default

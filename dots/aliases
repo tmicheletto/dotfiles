@@ -1,0 +1,6 @@
+# Shortcuts
+alias dev="cd ~/Code"
+alias devw="cd ~/Code/Latitude"
+alias devh="cd ~/Code/tim"
+alias devg="cd $GOPATH"
+alias g="git"

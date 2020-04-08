@@ -1,5 +1,5 @@
 # Golang
-export GOPATH=$HOME/code/go
+export GOPATH=$HOME/Code/go
 export GO111MODULE=auto
 export GOBIN=$GOPATH/bin
 

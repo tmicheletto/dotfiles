@@ -1,6 +1,6 @@
 [user]
 	name = Tim Micheletto
-	email = tmicheletto@seek.com.au
+	email = timothy.micheletto@latitudefinancial.com
 [core]
     editor = vim
 	excludesfile = ~/.gitignore_global
