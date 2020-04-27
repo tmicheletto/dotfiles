@@ -3,6 +3,7 @@ tap "homebrew/core"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "aws/tap"
 
 # Binaries
 brew "python"
@@ -15,12 +16,12 @@ brew "go"
 brew "dep"
 brew "zsh"
 brew "zsh-completions"
-brew "docker"
-brew "docker-compose"
-brew "docker-machine-driver-xhyve"
 brew "maven"
+brew "nvm"
+brew "aws-sam-cli"
 
 # Apps
+cask "docker"
 cask "iterm2"
 cask "macvim"
 cask "font-fira-code"

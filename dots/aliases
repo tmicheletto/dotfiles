@@ -4,3 +4,5 @@ alias devw="cd ~/Code/Latitude"
 alias devh="cd ~/Code/tim"
 alias devg="cd $GOPATH"
 alias g="git"
+
+alias awsauth="aws-azure-login --profile azuread"

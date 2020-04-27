@@ -7,6 +7,15 @@ for dot_file in ~/.{exports,aliases,functions,extra}; do
 	source "${dot_file}"
 done
 
+# NVM
+mkdir ~/.nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
+[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs virtualenv time)
+
 # Shortcuts
 bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word

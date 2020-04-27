@@ -74,6 +74,16 @@ cd .fonts
 cd ..
 rm -rf .fonts
 
+# Install iterm2 color schemes
+echo "Installing iterm2 color schemes"
+if [ ! -d ~/iTerm2-Color-Schemes ];
+then
+  git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git ~/iTerm2-Color-Schemes
+else
+  echo "~/iTerm2-Color-Schemes directory exists. Skipping iTerm2-Color-Schemes..."
+fi
+
+
 # Install vimrc
 echo "Installing vimrc..."
 if [ ! -d ~/.vim_runtime ];
@@ -91,15 +101,10 @@ defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
+# https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories/41674919#41674919
+sudo chown -R $(whoami) /usr/local/share/zsh
+sudo chmod -R 755 /usr/local/share/zsh
+
 # Set Zsh as default shell
 chsh -s /bin/zsh
 
-# Configure docker machine
-
-# docker-machine-driver-xhyve need root owner and uid
-sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-
-# Create default machine
-# https://pewpewthespells.com/blog/setup_docker_on_mac.html
-docker-machine create --driver xhyve default
