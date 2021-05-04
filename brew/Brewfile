@@ -19,6 +19,7 @@ brew "zsh-completions"
 brew "maven"
 brew "nvm"
 brew "aws-sam-cli"
+brew "httpstat"
 
 # Apps
 cask "docker"
@@ -26,3 +27,4 @@ cask "iterm2"
 cask "macvim"
 cask "font-fira-code"
 cask "visual-studio-code"
+cask "drawio"

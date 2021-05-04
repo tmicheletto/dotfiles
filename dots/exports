@@ -1,16 +1,15 @@
 # Golang
 export GOPATH=$HOME/Code/go
-export GO111MODULE=auto
-export GOBIN=$GOPATH/bin
+export GO111MODULE=
 
 # Path
-PATH=$PATH:$GOPATH:$GOBIN
+PATH=$PATH:$GOPATH/bin
 export PATH
 
 export DEFAULT_USER=$USER
 
 export AWS_DEFAULT_REGION=ap-southeast-2
-export AWS_SHARED_CREDENTIALS_FILE=$HOME/Downloads/credentials
-export AWS_PROFILE=default
 
 export GOPRIVATE=github.latitudefinancial.com
+
+export AWS_SHARED_CREDENTIALS_FILE=$HOME/Downloads/credentials

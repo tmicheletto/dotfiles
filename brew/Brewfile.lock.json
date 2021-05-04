@@ -2,19 +2,19 @@
   "entries": {
     "tap": {
       "homebrew/core": {
-        "revision": "dc8c20150a499d47fd9b2ae4e68d2d907dfe105f"
+        "revision": "5326934c8388b0eee5ee9dc4807e79c156d19534"
       },
       "homebrew/bundle": {
-        "revision": "784f4e47c2e527c515454212db158149f869c7f3"
+        "revision": "6cc55a61616f6c4c195bdc13847060b699a0e407"
       },
       "homebrew/cask": {
-        "revision": "9255e49b07f1fd1be424925a726fffc8e3e46f8a"
+        "revision": "477c04090133091616eb75d4213d2eff4b7b7710"
       },
       "homebrew/cask-fonts": {
-        "revision": "a624c89faf91b3ee1d4743d705ccff4e624ec181"
+        "revision": "c880bad3235107326fab62bc8dd4e764054182ec"
       },
       "aws/tap": {
-        "revision": "35191947cd09fb4e0a28f8b9dad569b535e2daa7"
+        "revision": "9ddfdddbe1fed52940f9561ed04618682d5b24b2"
       }
     },
     "brew": {
@@ -61,22 +61,22 @@
         }
       },
       "awscli": {
-        "version": "2.0.6",
+        "version": "2.0.10",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/awscli-2.0.9.catalina.bottle.tar.gz",
-              "sha256": "c0aa10b9d185aeaa0e396a814593b8ec48a800adababa55b62287e7461aebc4c"
+              "url": "https://homebrew.bintray.com/bottles/awscli-2.0.10.catalina.bottle.tar.gz",
+              "sha256": "05bd63ee4669aac00204a4606273875654655efe37a40bbfe0f4c5cc3f7b069d"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/awscli-2.0.9.mojave.bottle.tar.gz",
-              "sha256": "a15ca55ad44538bd2f4b33a164c85f7b2c1e968d513c8db510051590e452cb15"
+              "url": "https://homebrew.bintray.com/bottles/awscli-2.0.10.mojave.bottle.tar.gz",
+              "sha256": "4ddd6d30c56eee7991cf14069d97d70896959f01c05a22782aabe861da3f7e62"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/awscli-2.0.9.high_sierra.bottle.tar.gz",
-              "sha256": "52e98d1f0c5288546cc9ac91d63536b0c62e0c1b53147a70b3b8f0abc5566a69"
+              "url": "https://homebrew.bintray.com/bottles/awscli-2.0.10.high_sierra.bottle.tar.gz",
+              "sha256": "004bfcc8b0f71d49ac7ae1764191faefe9c91eaa3fe2c11d5baaec957e445889"
             }
           }
         }
@@ -132,7 +132,7 @@
         "bottle": false
       },
       "go": {
-        "version": "1.14.1",
+        "version": "1.14.2_1",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
@@ -299,21 +299,25 @@
         "bottle": false
       },
       "aws-sam-cli": {
-        "version": "0.47.0",
+        "version": "0.48.0",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "sierra": {
-              "url": "https://github.com/awslabs/aws-sam-cli/releases/download/v0.47.0//aws-sam-cli-0.47.0.sierra.bottle.tar.gz",
-              "sha256": "ac0bb0f6f07b3fb36380116d0db13edcc94cca8528cd6a08562b748e256554a0"
+              "url": "https://github.com/awslabs/aws-sam-cli/releases/download/v0.48.0//aws-sam-cli-0.48.0.sierra.bottle.tar.gz",
+              "sha256": "58bd0e6dd2ef6df8a448e1ab51e97986ca561e05d070d6200098465e6bcfc55a"
             },
             "x86_64_linux": {
-              "url": "https://github.com/awslabs/aws-sam-cli/releases/download/v0.47.0//aws-sam-cli-0.47.0.x86_64_linux.bottle.tar.gz",
-              "sha256": "da9cc4057057a52a96c177c3756c121c59b644ed208313332386774b899a2847"
+              "url": "https://github.com/awslabs/aws-sam-cli/releases/download/v0.48.0//aws-sam-cli-0.48.0.x86_64_linux.bottle.tar.gz",
+              "sha256": "ac8a55cf66287686b42d0bdf3405b4fcef1617b3eb5c3bda85d3ecbd185b0287"
             }
           }
         }
+      },
+      "httpstat": {
+        "version": "1.2.1",
+        "bottle": false
       }
     },
     "cask": {
@@ -346,17 +350,23 @@
         "options": {
           "full_name": "visual-studio-code"
         }
+      },
+      "drawio": {
+        "version": "13.0.3",
+        "options": {
+          "full_name": "drawio"
+        }
       }
     }
   },
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.13",
+        "HOMEBREW_VERSION": "2.2.16-56-g0723df3",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "dc8c20150a499d47fd9b2ae4e68d2d907dfe105f",
-        "CLT": "1103.0.32.29",
-        "Xcode": "11.4",
+        "Homebrew/homebrew-core": "5326934c8388b0eee5ee9dc4807e79c156d19534",
+        "CLT": "11.4.1.0.1.1586360307",
+        "Xcode": "11.4.1",
         "macOS": "10.15.4"
       }
     }
