@@ -1,32 +1,33 @@
 [user]
 	name = Tim Micheletto
-	email = timothy.micheletto@latitudefinancial.com
+	email = tim.micheletto@xero.com
 [core]
     editor = vim
 	excludesfile = ~/.gitignore_global
-[alias]
-	branch-name = "!git rev-parse --abbrev-ref HEAD"
-    f = fetch
-    p = pull
-    publish = "!git push -u origin $(git branch-name)"
-    st = status
-    co = checkout
-    ec = config --global -e
-    up = !git pull --rebase --prune $@ && git submodule update --init --recursive
-    cob = checkout -b
-    cm = !git add -A && git commit
-    cmad = !git add -A && git reset head Source/SEEK.AdCentre.Website/Web.config && git commit
-    save = !git add -A && git commit -m 'SAVEPOINT'
-    undo = reset HEAD~1 --mixed
-    amend = commit -a --amend
-    wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
-    bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
-    bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
-    # Delete the remote version of the current branch
-    unpublish = "!git push origin :$(git branch-name)"
+	autocrlf = false
+	pager = less -F -X
 [push]
-	default = upstream
+	default = current
 [mergetool]
 	keepBackup = false
+	prompt = false
 [credential]
 	helper = osxkeychain
+[pull]
+	rebase = false
+[rebase]
+	autoStash = true
+	autosquash = true
+[diff "jupyternotebook"]
+	command = git-nbdiffdriver diff
+[merge "jupyternotebook"]
+	driver = git-nbmergedriver merge %O %A %B %L %P
+	name = jupyter notebook merge driver
+[difftool "nbdime"]
+	cmd = git-nbdifftool diff \"$LOCAL\" \"$REMOTE\" \"$BASE\"
+[difftool]
+	prompt = false
+[mergetool "nbdime"]
+	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[init]
+	defaultBranch = main

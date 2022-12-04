@@ -4,6 +4,8 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "aws/tap"
+tap "hashicorp/tap"
+tap "dbt-labs/dbt"
 
 # Binaries
 brew "python"
@@ -20,6 +22,9 @@ brew "maven"
 brew "nvm"
 brew "aws-sam-cli"
 brew "httpstat"
+brew "hashicorp/tap/terraform"
+brew "dbt"
+brew "k9s"
 
 # Apps
 cask "docker"
@@ -28,3 +33,4 @@ cask "macvim"
 cask "font-fira-code"
 cask "visual-studio-code"
 cask "drawio"
+cask "macdown"
